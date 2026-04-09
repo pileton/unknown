@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "description": "Strictly opt-in local Discord server archiver for Vendetta-compatible clients.",
+    "scripts": {
+        "build": "rollup -c"
+    },
     "dependencies": {
         "@swc/helpers": "^0.4.14"
     },
