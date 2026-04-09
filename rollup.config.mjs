@@ -1,4 +1,6 @@
-import swc from "rollup-plugin-swc3";
+import esbuild from "rollup-plugin-esbuild";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default {
     input: "src/index.ts",
@@ -8,12 +10,11 @@ export default {
         exports: "default"
     },
     plugins: [
-        swc({
-            jsc: {
-                parser: { syntax: "typescript", tsx: true },
-                target: "es2022",
-                transform: { react: { runtime: "classic", pragma: "vendetta.metro.common.React.createElement" } }
-            }
+        nodeResolve(),
+        commonjs(),
+        esbuild({
+            minify: true,
+            target: "es2022"
         })
     ]
 };
