@@ -1,0 +1,14 @@
+{
+    "name": "OmniArchive",
+    "description": "Strictly opt-in local server archiving for Vendetta-compatible Discord clients.",
+    "authors": [
+        {
+            "name": "Codex",
+            "id": "0"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_download_24px"
+    }
+}
